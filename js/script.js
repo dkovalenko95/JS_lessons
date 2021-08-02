@@ -48,12 +48,23 @@ const personalMovieDB = {
     privat: false
 };
 
+/* const a = prompt('Name one of the last movies you watched', ''),
+      b = prompt('How did you rate the movie?', ''),
+      c = prompt('Name one of the last movies you watched', ''),
+      d = prompt('How did you rate the movie?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d; */
+/* вносимо дані в об'єкт */
+/* console.log(personalMovieDB); */
+
 for (let i = 0; i < 1; i++ ) {
     const numberOfFilms = +prompt('How many movies have you already watched?', '');
         console.log(numberOfFilms);
     if (numberOfFilms == '' || numberOfFilms == null) {
         alert('Please, answer the question by using number');
         i--;
+
     } else if (personalMovieDB.count < 10) {
         alert('You watched quite a few movies');
         console.log('You watched quite a few movies');
@@ -63,6 +74,7 @@ for (let i = 0; i < 1; i++ ) {
     } else if (personalMovieDB.count >= 30) {
         alert('You are a real movie fan');
         console.log('You are a real movie fan');
+        
     } else {
         alert('You have not answer the question!');
         console.log('You have not answer the question!');
@@ -75,8 +87,10 @@ for (let i = 0; i < 2; i++) {
 
     if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
         personalMovieDB.movies[a] = b;
+        alert('Done!');
         console.log('Done');
     } else {
+        alert('Error!');
         console.log('Error!!!');
         i--;
     }    
